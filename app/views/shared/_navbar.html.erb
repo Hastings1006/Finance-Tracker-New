@@ -1,0 +1,34 @@
+
+  <nav class="navbar navbar-expand-lg">
+  <%= link_to root_path do %>
+    <p class="navbar-brand" >MONETREE</p>
+  <% end %>
+    <div  id="navbarNav">
+      <ul class="navbar-nav">
+        <% if current_user %>
+          <li class="nav-item">
+            <%= link_to accounts_path(current_user) do %>
+              <h4 class="nav-link">Accounts<span class="sr-only"></span></h4>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to transactions_path(current_user) do %>
+              <h4 class="nav-link">Transactions<span class="sr-only"></span></h4>
+            <%end%>
+          </li>
+          <li class="nav-item">
+            <%= link_to categories_path(current_user) do %>
+              <h4 class="nav-link">Categories<span class="sr-only"></span></h4>
+            <%end%>
+          </li>
+          <li class="nav-item">
+            <%= link_to budgets_path(current_user) do %>
+              <h4 class="nav-link">Budgets<span class="sr-only"></span></h4>
+            <%end%>
+        <%end%>
+
+      </ul>
+    </div>
+          <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-password log-out" %>
+    <img class="avatar" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
+  </nav>

@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20vw;
+  float: left;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  max-width: 150px;
+  min-width: fit-content;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: calc(1vw + 1vh);
+  padding: 1em;
+  margin: 0;
+}
+
+.navbar-brand:hover {
+  color: rgb(228, 43, 43);
+}
+
+.navbar-nav {
+  display: inline;
+}
+
+.nav-link:hover {
+  color: rgb(228, 43, 43);
+}
+
+.nav-link {
+  color: white;
+  font-size: calc(1vw + 1vh);
+}
+
+.avatar {
+  margin-top: auto;
+  align-self: center;
+}
+
+.log_out {
+  color: white;
+  font-size: calc(1vw + 1vh);
+  margin-top: auto;
+  align-self: center;
+}
